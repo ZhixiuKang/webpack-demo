@@ -6,3 +6,20 @@ const div = document.getElementById("app");
 div.innerHTML = `
     <img src=${png}>
 `;
+
+const button = document.createElement("button");
+button.innerHTML = "lazy load";
+button.onclick = () => {
+  const promise = import("./lazy");
+  promise.then(
+    (module) => {
+      const fn = module.default;
+      fn();
+    },
+    () => {
+      console.log("Error in loading module");
+    }
+  );
+};
+
+div.appendChild(button);
