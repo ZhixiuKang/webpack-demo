@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{9:function(n,o,u){"use strict";function a(){console.log("I am a lazy load module")}u.r(o),u.d(o,"default",(function(){return a}))}}]);
